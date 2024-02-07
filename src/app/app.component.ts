@@ -1,33 +1,34 @@
-import { Component } from '@angular/core';
-import { account, ID } from '../lib/appwrite';
-
+import { Component, OnInit } from '@angular/core';
+import { appwriteConfig, appwriteDatabase  } from './appwrite'; // Replace with the actual path
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  loggedInUser: any = null;
-  email: string = '';
-  password: string = '';
-  name: string = '';
+export class AppComponent implements OnInit {
+  // bookData: any = [];
 
-  async login(email: string, password: string) {
-    await account.createEmailSession(email, password);
-    this.loggedInUser = await account.get();
+  // constructor() {}
+
+  ngOnInit() {
+    // this.fetchData();
   }
-
-  async register(email: string, password: string, name: string) {
-    await account.create(ID.unique(), email, password, name);
-    this.login(email, password);
-  }
-
-  async logout() {
-    await account.deleteSession('current');
-    this.loggedInUser = null;
-  }
-
-
+  // fetchData() {
+  //   const promise = appwriteDatabase.listDocuments(
+  //     appwriteConfig.databaseId, // Pass the database ID
+  //     appwriteConfig.collectionId // Pass the collection ID
+  //   );
+  //   promise.then(
+  //     (response) => {
+  //       this.bookData = response.documents; // Assuming 'documents' is the property containing your data
+  //       // Log the beautified JSON response
+  //       console.log(JSON.stringify(this.bookData, null, 2)); // Success
+  //     },
+  //     (error) => {
+  //       console.log(error); // Failure
+  //     }
+  //   );
+  // }
 
 
 }

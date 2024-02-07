@@ -1,0 +1,16 @@
+<form #bookForm="ngForm" (ngSubmit)="addBook()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Enter Book</label>
+      <input type="text" class="form-control" id="name" aria-describedby="emailHelp" [(ngModel)]="book.name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="info" class="form-label">Fill Info</label>
+      <input type="text" class="form-control" id="info" [(ngModel)]="book.info" name="info" required>
+    </div>
+    <div class="mb-3">
+      <label for="rating" class="form-label">Fill Rating</label>
+      <input type="number" class="form-control" id="rating" [(ngModel)]="book.rating" name="rating" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Book</button>
+  </form>
+  
