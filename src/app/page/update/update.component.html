@@ -1,1 +1,25 @@
-<p>update works!</p>
+<h1>Update</h1>
+<!-- list.component.html -->
+<div class="border p-3 mb-4" *ngFor="let book of books">
+    <span>{{ book.book_name }} - {{ book.book_rating }} - {{ book.book_info }}</span>
+    <button (click)="updateBook(book)">Update</button>
+    <button (click)="deleteBook(book.$id)">Delete</button>
+
+    <!-- Display update form only for the selected book -->
+    <div *ngIf="selectedBook && selectedBook.$id === book.$id">
+        <h2>Update Book</h2>
+        <form (submit)="submitUpdate()">
+            <label for="bookName">Book Name:</label>
+            <input id="bookName" [(ngModel)]="selectedBook.book_name" name="book_name" required>
+
+            <label for="bookInfo">Book Info:</label>
+            <textarea id="bookInfo" [(ngModel)]="selectedBook.book_info" name="book_info" required></textarea>
+
+            <label for="bookRating">Book Rating:</label>
+            <input type="number" id="bookRating" [(ngModel)]="selectedBook.book_rating" name="book_rating" required>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+</div>
