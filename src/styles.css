@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+body,* {
+    font-family: 'Jost Medium';
+}
+
+
+
+/* FONTS  */
+@font-face {
+    font-family: 'Jost Semi Blod';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bd398f0f911317c8e2f5_Jost-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Thin(100)';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bd6c4bca56bb689d77ef_Jost-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Regular';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bd8cd50bdec0c83b9ec1_Jost-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Medium';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bd9d806237ea741bdc57_Jost-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Light';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bdace7c0340aef8ca4a7_Jost-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Extra Light';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bdcd806237ea741c26d8_Jost-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Bold';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bdf7d50bdec0c83c1bff_Jost-ExtraBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Jost Extra Bold';
+    src: url('https://assets.website-files.com/64b8bca09e0474df27fcc6a9/64b8bdf7d50bdec0c83c1bff_Jost-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
