@@ -1,5 +1,10 @@
 // appwrite.ts
-import { Client, Databases } from "appwrite";
+import { Client, Databases, Account, ID } from "appwrite";
+
+
+
+
+
 
 const appwriteConfig = {
   endpoint: 'https://cloud.appwrite.io/v1', // Your API Endpoint
@@ -8,7 +13,11 @@ const appwriteConfig = {
   collectionId: '65c33c367e68080a43e2' // Your collection ID
 };
 
+
+
 const appwriteClient = new Client().setEndpoint(appwriteConfig.endpoint).setProject(appwriteConfig.project);
 const appwriteDatabase = new Databases(appwriteClient);
 
-export { appwriteClient, appwriteDatabase, appwriteConfig };
+const appwriteAccount = new Account(appwriteClient);
+
+export { appwriteClient, appwriteDatabase, appwriteConfig , appwriteAccount , ID, Account };

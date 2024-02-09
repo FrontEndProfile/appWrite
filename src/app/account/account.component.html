@@ -1,0 +1,27 @@
+<!-- account.component.html -->
+
+
+
+
+
+
+
+
+
+<div class="card login-form m-auto w-50 text-center border-0">
+  <div class="card-body">
+      <h2 class="card-title text-center mb-4">Enter BookShop</h2>
+      <form>
+        <div>
+          <button type="button" class="btn btn-primary btn-lg d-block mx-auto mb-3 w-25" routerLink="home">As a Guest</button>
+          <button type="button" class="btn btn-primary btn-lg d-block mx-auto mb-3 w-25" (click)="toggleAdminForm()">Admin</button>
+
+          <div *ngIf="showAdminForm" class="text-start">
+            <app-admin-auth (adminSubmit)="handleAdminSubmit($event)"></app-admin-auth>
+          </div>
+        </div>
+          
+          
+      </form>
+  </div>
+</div>

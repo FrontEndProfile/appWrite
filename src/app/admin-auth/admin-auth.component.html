@@ -1,0 +1,30 @@
+<!-- admin-auth.component.html -->
+<!-- <form (submit)="submitForm()">
+    <label for="adminUsername">Admin Username:</label>
+    <input type="text" id="adminUsername" name="adminUsername" [(ngModel)]="adminAuth.username" required>
+  
+    <label for="adminPassword">Admin Password:</label>
+    <input type="password" id="adminPassword" name="adminPassword" [(ngModel)]="adminAuth.password" required>
+  
+    <button type="submit">Submit</button>
+  </form> -->
+  
+
+
+  <div class="card login-form m-auto">
+    <div class="card-body">
+        <h5 class="card-title text-center">Admin Login</h5>
+        <form (submit)="submitForm()">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input class="form-control" type="text" id="adminUsername" name="adminUsername" [(ngModel)]="adminAuth.username" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" type="password" id="adminPassword" name="adminPassword" [(ngModel)]="adminAuth.password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login Dashboard</button>
+            
+        </form>
+    </div>
+  </div>

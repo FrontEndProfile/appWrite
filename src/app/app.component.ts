@@ -1,34 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { appwriteConfig, appwriteDatabase  } from './appwrite'; // Replace with the actual path
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  // bookData: any = [];
+  hideNavbar: boolean = false;
 
-  // constructor() {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    // this.fetchData();
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      // Check if the current route is the home route
+      this.hideNavbar = this.activatedRoute.firstChild?.snapshot.routeConfig?.path === '';
+    });
   }
-  // fetchData() {
-  //   const promise = appwriteDatabase.listDocuments(
-  //     appwriteConfig.databaseId, // Pass the database ID
-  //     appwriteConfig.collectionId // Pass the collection ID
-  //   );
-  //   promise.then(
-  //     (response) => {
-  //       this.bookData = response.documents; // Assuming 'documents' is the property containing your data
-  //       // Log the beautified JSON response
-  //       console.log(JSON.stringify(this.bookData, null, 2)); // Success
-  //     },
-  //     (error) => {
-  //       console.log(error); // Failure
-  //     }
-  //   );
-  // }
 
 
 }
