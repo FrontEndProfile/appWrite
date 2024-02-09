@@ -16,6 +16,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
 import { Account } from 'appwrite';
 import { AdminHomeComponent } from './page/admin-home/admin-home.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 
 
@@ -33,7 +35,9 @@ import { AdminHomeComponent } from './page/admin-home/admin-home.component';
     AdminAuthComponent,
     UserDashboardComponent,
     AdminDashboardComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    HeroComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

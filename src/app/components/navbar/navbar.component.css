@@ -2,4 +2,16 @@
     padding: 0;
     font-size: 18px;
     padding: 20px;
+    color: var(--title-color);
+    margin-inline: 8px;
+    font-size: 18px;
+    transition: color .3s;
+}
+.nav-link:hover {
+	color: var(--primary-color);
+}
+
+header {
+    position: relative;
+    z-index: 9;
 }

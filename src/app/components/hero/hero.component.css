@@ -1,0 +1,33 @@
+.hero {
+    background-color: #eff5f9;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+.hyphen {
+    width: 25px;
+    height: 3px;
+    background-color: #0160ff;
+    display: block;
+}
+.hero h4 {
+    grid-gap: 16px;
+    color: #1b3764;
+    font-family: "Jost Medium";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+.hero__content {
+    max-width: 550px;
+    width: 100%;
+}
+.hero__content h1 {
+    font-size: 80px;
+    margin-bottom: 35px;
+    color: #01001a;
+    font-weight: 500;
+}
+

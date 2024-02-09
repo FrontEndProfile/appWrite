@@ -1,6 +1,19 @@
 body,* {
     font-family: 'Jost Medium';
 }
+body {
+  position: relative;
+}
+
+
+
+:root {
+  --body-color: #5a5a5a;
+  --secondary-color: #01001a;
+  --primary-color: #0160ff;
+  --white-color: white;
+  --title-color: #1b3764;
+}
 
 
 
@@ -60,4 +73,28 @@ body,* {
     font-weight: 800;
     font-style: normal;
     font-display: swap;
+  }
+
+
+
+
+
+  .hero__btn {
+    padding-top: 14px;
+    padding-bottom: 13px;
+    line-height: 1.2;
+    transition: color .3s, background-color .3s;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding-left: 37px;
+    padding-right: 37px;
+    font-family: 'Jost Semi Blod', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white-color);
+  }  
+
+  .hero__btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
   }
