@@ -1,0 +1,14 @@
+.categories__btn {
+    padding: 10px 37px;
+    color: var(--white-color);
+    font-family: 'Jost Semi Blod', sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.categories__btn img {
+    padding-left: 10px;
+}
+.categories {
+    padding-top: 100px;
+}
